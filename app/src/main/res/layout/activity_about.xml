@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
         android:id="@+id/title"
@@ -18,32 +16,40 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/openbtn"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/stlabel"
+        android:src="@drawable/heostudiodarkmark"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="_Open_"
-        android:textSize="30dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintBottom_toTopOf="@id/aboutbtn"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toBottomOf="@id/title"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        android:background="@android:color/transparent"
-        style="?android:attr/borderlessButtonStyle"/>
+        app:layout_constraintTop_toTopOf="@id/gitbtn" />
 
-    <TextView
-        android:id="@+id/aboutbtn"
+    <ImageButton
+        android:id="@+id/gitbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="_About_"
-        android:textSize="30dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/githubmark64px"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="@id/stlabel"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintTop_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/backbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="back"
+        android:textSize="20dp"
         android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@id/gitbtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
         style="?android:attr/borderlessButtonStyle"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
